@@ -1,0 +1,30 @@
+Course: C867		Name: William Romero		Email: wrome11@wgu.edu		ID: 011139923		Date: 09/11/2024		
+
+This program is for the performance assessment for WGU's C867 course. The goal of the program is to migrate an existing database of student 
+information including student IDs, names, email addresses, ages, number of days to complete courses, and the degree program. 
+
+
+This is done using two classes: Student and Roster. The Student class is used to create student objects, and hold the information
+for each student object, as well as provide accessors and mutators for the data. The Roster class is used to create an array of pointers holding
+student objects, and provides methods to print, manipulate (using the student classes functions), and access the student objects in the array.
+
+I would like to provide my own thoughts on some of the PA, as there were some things I found were not covered in enough detail in the course material.
+
+The thing I had the most trouble with out of all the course material was the use of pointers, and the functions they served/what they were used for.
+I felt like some practical examples that demonstrated the usefulness of pointers would've been helpful to reinforce the concepts in the course material. 
+The general concensus I've seen from other students in and outside of WGU is that pointers are something of an unknown quantity, and unless you use them day-to-day,
+they're not very well understood and when to use them is basically a guessing game. Speaking with my course instructor and using outside resources helped me to understand 
+the function of pointers better than I did, but I still don't feel entirely confident in my capability to use them. Some more material and hands on stuff for pointers would
+definitely be helpful to future students, and would have been helpful to me as well.
+
+Another thing that I found a bit hard to grasp was string manipulation. I think it was covered well enough for a baseline understanding, but I definitely feel like more could've
+been covered, just to deepen the understanding of it. 
+
+Aside from those two examples, there were a few things, such as the use of the new and delete operators, as well as manipulating and accessing vectors (like vector.begin()), that while covered,
+definitely fell short of making me feel like I understood them. 
+
+I know this was meant to be more of an introduction to programming, so I'm overall happy with how everything went, but I figured I'd just provide some feedback on what I felt could 
+be done to improve the course for students in the future. 
+
+Thanks for reading, if there's any questions, my email is at the top.
+
