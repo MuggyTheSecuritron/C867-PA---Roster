@@ -28,14 +28,16 @@ Roster::Roster() {
 	};
 	
 	int i;
+	int* indexInConstructor = &indexForRoster;
+	
 
 	for (i = 0; i < classRosterArraySize; ++i) {
 		string parsing = studentData[i];
-		
+
 		size_t rhs = parsing.find(',');
 		studentID = parsing.substr(0, rhs);
 		size_t lhs = rhs + 1;
-		rhs = parsing.find(',',lhs);
+		rhs = parsing.find(',', lhs);
 		firstName = parsing.substr(lhs, rhs - lhs);
 		lhs = rhs + 1;
 		rhs = parsing.find(',', lhs);
@@ -67,17 +69,17 @@ Roster::Roster() {
 		else if (degreeProgramString == "SOFTWARE") {
 			degreeProgram = SOFTWARE;
 		}
-		else {
-			degreeProgram = BONK;
-		}
-		AddStudentToArray(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram,i);
 
+		*indexInConstructor = i;
+
+		AddStudentToArray(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
+	}
 
 
 	}
 
 
-}
+
 
 //Destructor
 Roster::~Roster() {
@@ -85,9 +87,10 @@ Roster::~Roster() {
 }
 
 //Function Definitions
-void Roster::AddStudentToArray(string studentID, string firstName, string lastName, string emailAddress, int age, int DIC1, int DIC2, int DIC3, DegreeProgram degreeProgram, int index) {
-
-	ClassRosterArray[index] = new Student(studentID, firstName, lastName, emailAddress, age, DIC1, DIC2, DIC3, degreeProgram);
+void Roster::AddStudentToArray(string studentID, string firstName, string lastName, string emailAddress, int age, int DIC1, int DIC2, int DIC3, DegreeProgram degreeProgram) {
+	int* indexInASTA;
+	indexInASTA = &indexForRoster;
+	ClassRosterArray[*indexInASTA] = new Student(studentID, firstName, lastName, emailAddress, age, DIC1, DIC2, DIC3, degreeProgram);
 
 }
 void Roster::RemoveStudentByID(string studentID) {

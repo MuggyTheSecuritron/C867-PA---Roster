@@ -9,7 +9,7 @@ public:
 	~Roster();
 
 	//Roster Manipulation
-	void AddStudentToArray(string, string, string, string, int, int, int, int, DegreeProgram, int);
+	void AddStudentToArray(string, string, string, string, int, int, int, int, DegreeProgram);
 	void RemoveStudentByID(string);
 
 	//Array
@@ -21,4 +21,6 @@ public:
 	void PrintAvgDaysInCourse(string);
 	void PrintInvalidEmails();
 	void PrintByDegreeProgram(DegreeProgram);
+private:
+	int indexForRoster;
 };
